@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Chetan Suraswal thinks through a data analytics problem — the process, and the things he refuses to do." />
+  <meta name="keywords" content="Data Analyst, Analytical Thinking, SQL, Power BI, Python" />
+  <title>Chetan Suraswal · How I Think</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-scoped additions only — nothing here touches the shared stylesheet */
+    .think-step{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+      padding:28px 0;
+      border-top:1px solid var(--border);
+    }
+    .think-step:last-child{ border-bottom:1px solid var(--border); }
+    .think-step-num{ flex-shrink:0; margin-top:4px; }
+    .think-title{ font-size:19px; margin-bottom:8px; }
+    .think-desc{ color:var(--text-2); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Chetan Suraswal</a>
+      <div class="nav-links">
+        <a href="index.html#systems" class="nav-link">Work</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#recruiters" class="nav-link">Contact</a>
+        <a href="https://drive.google.com/file/d/16U_qGnruEOuB85VrIXo05NhIVK6rNj_J/view?usp=drive_link" target="_blank" class="nav-cta">Resume ↗</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#systems" class="nav-mobile-link">Work</a>
+      <a href="index.html#about" class="nav-mobile-link">About</a>
+      <a href="index.html#recruiters" class="nav-mobile-link">Contact</a>
+      <a href="https://drive.google.com/file/d/16U_qGnruEOuB85VrIXo05NhIVK6rNj_J/view?usp=drive_link" target="_blank" class="nav-mobile-link">Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">How I Think</p>
+      <h1 class="hero-title">Decisions First.<br>Dashboards Second.</h1>
+      <p class="hero-sub">This page isn't a personality summary. It's the actual sequence I run every analysis through, and the assumptions I refuse to make along the way.</p>
+      <a href="index.html#systems" class="btn-primary">See It Applied <span class="btn-arrow">↗</span></a>
+    </div>
+  </section>
+
+  <!-- THE PROCESS -->
+  <section class="systems" id="process" style="padding-bottom:100px;">
+    <div class="container">
+      <p class="section-label">The Process</p>
+      <h2 class="section-title">Five Steps.<br>No Shortcuts.</h2>
+    </div>
+
+    <div class="container" style="margin-top:48px;">
+      <div class="project reveal" style="padding:8px 36px 16px;">
+
+        <div class="think-step">
+          <span class="project-num think-step-num">01</span>
+          <div>
+            <h3 class="project-title think-title">Start with the decision, not the dataset.</h3>
+            <p class="project-desc think-desc">I don't open a dataset until I know what decision it needs to support, and who's actually making it. If there's no decision on the other end, it's not analysis — it's curiosity.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">02</span>
+          <div>
+            <h3 class="project-title think-title">Audit the data before trusting it.</h3>
+            <p class="project-desc think-desc">Where did it come from, what's missing, and what assumptions are already baked in? Most bad insights aren't bad analysis — they're bad data wearing a good chart.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">03</span>
+          <div>
+            <h3 class="project-title think-title">Model the mechanism, not the trend.</h3>
+            <p class="project-desc think-desc">A trend tells you what happened. A model tells you why — and whether it's still going to be true next quarter.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">04</span>
+          <div>
+            <h3 class="project-title think-title">Design for the person who has to act, not the dashboard.</h3>
+            <p class="project-desc think-desc">If a metric doesn't change what someone does on Monday morning, it doesn't earn a tile — no matter how interesting it looked in the notebook.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">05</span>
+          <div>
+            <h3 class="project-title think-title">End with a sentence, not just a chart.</h3>
+            <p class="project-desc think-desc">Every analysis closes with a recommendation that starts with "So we should—". If it doesn't, it isn't finished, it's just decorated.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I WON'T DO -->
+  <section class="about" id="refuse">
+    <div class="container">
+      <p class="section-label">What I Won't Do</p>
+      <h2 class="section-title" style="margin-top:12px;margin-bottom:32px;">Rigor Isn't Optional.</h2>
+      <ul class="insight-list" style="gap:18px;max-width:680px;">
+        <li>I don't smooth over outliers without explaining why they exist.</li>
+        <li>I don't call a trend line "predictive" just because it has a confidence band around it.</li>
+        <li>I don't ship a metric I can't explain in one sentence, out loud, to someone who isn't an analyst.</li>
+        <li>I don't present an assumption as if it were a fact.</li>
+        <li>I don't optimize a dashboard for "looks impressive" over "is accurate."</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="recruiters">
+    <div class="container">
+      <div class="recruiters-inner reveal">
+        <p class="section-label" style="color:rgba(255,255,255,0.5)">Curious How This Plays Out</p>
+        <h2 class="recruiters-title">See it applied,<br>not just explained.</h2>
+        <p class="recruiters-sub">Three systems. Each one follows this exact process — data audit, modeling, a decision, and a number I'm willing to defend.</p>
+        <div class="recruiters-actions">
+          <a href="index.html#systems" class="btn-white">View the Work ↗</a>
+          <a href="index.html" class="btn-outline-white">Back to Home ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Chetan Suraswal</span>
+        <span class="footer-center">Analytics Systems · Built for real decisions</span>
+        <span class="footer-copy" id="footerYear">© 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update footer year so this never goes stale again
+    document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear();
+
+    // Sticky nav shadow on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.nav-mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal animation
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
