@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: Workflow Optimization & Delay Prediction — dataset, approach, and impact." />
+  <title>Chetan Suraswal · Workflow Optimization — Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-scoped additions only — shared stylesheet is untouched */
+    .case-breadcrumb{ font-size:13px; color:var(--muted); margin-bottom:24px; display:inline-flex; align-items:center; gap:6px; }
+    .case-breadcrumb:hover{ color:var(--accent); }
+    .case-lead{ font-size:16px; line-height:1.75; color:var(--text-2); max-width:680px; margin-top:16px; }
+    .case-tools{ display:flex; gap:8px; flex-wrap:wrap; margin-top:24px; }
+    .case-tool{ font-family:var(--mono); font-size:12px; padding:5px 11px; border:1px solid var(--border); border-radius:6px; color:var(--text-2); background:var(--bg-alt); }
+    .case-hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .case-section{ padding:72px 0; background:var(--white); border-top:1px solid var(--border); }
+    .case-section.alt{ background:var(--bg-alt); }
+    .think-step{ display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid var(--border); }
+    .think-step:first-child{ border-top:none; }
+    .think-step:last-child{ border-bottom:1px solid var(--border); }
+    .think-step-num{ flex-shrink:0; margin-top:4px; }
+    .think-title{ font-size:18px; margin-bottom:8px; }
+    .think-desc{ color:var(--text-2); }
+    .case-placeholder{ font-size:11px; font-weight:600; letter-spacing:.05em; color:var(--accent); background:rgba(0,102,204,0.08); border:1px solid rgba(0,102,204,0.15); padding:2px 8px; border-radius:5px; margin-left:8px; vertical-align:middle; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Chetan Suraswal</a>
+      <div class="nav-links">
+        <a href="index.html#systems" class="nav-link">Work</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#recruiters" class="nav-link">Contact</a>
+        <a href="https://drive.google.com/file/d/16U_qGnruEOuB85VrIXo05NhIVK6rNj_J/view?usp=drive_link" target="_blank" class="nav-cta">Resume ↗</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#systems" class="nav-mobile-link">Work</a>
+      <a href="index.html#about" class="nav-mobile-link">About</a>
+      <a href="index.html#recruiters" class="nav-mobile-link">Contact</a>
+      <a href="https://drive.google.com/file/d/16U_qGnruEOuB85VrIXo05NhIVK6rNj_J/view?usp=drive_link" target="_blank" class="nav-mobile-link">Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <a href="index.html#systems" class="case-breadcrumb">← All Systems</a>
+      <p class="hero-eyebrow">Case Study · 01</p>
+      <h1 class="hero-title">Workflow Optimization &amp;<br>Delay Prediction</h1>
+      <p class="case-lead">Identifies inefficiencies in task allocation, resource usage, and deadline adherence in project-driven environments — and predicts delay probability early enough that someone can actually act on it.</p>
+      <div class="case-tools">
+        <span class="case-tool">SQL</span>
+        <span class="case-tool">Python</span>
+        <span class="case-tool">Machine Learning</span>
+        <span class="case-tool">Power BI</span>
+      </div>
+      <div class="case-hero-actions">
+        <a href="https://github.com/Chetan0075/Workflow-Optimization-Predictive-Analytics" target="_blank" class="btn-secondary">GitHub Repository ↗</a>
+        <a href="https://chetan0075.github.io/Workflow-Optimization-Live-Dashboard/" target="_blank" class="btn-secondary">Live Dashboard ↗</a>
+        <a href="https://github.com/Chetan0075/Workflow-Optimization-Predictive-Analytics/blob/main/Data/Case%20Study/AI_Driven_Workflow_Optimization_Case_Study.pdf" target="_blank" class="btn-secondary">Case Study PDF ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="case-section">
+    <div class="container">
+      <p class="section-label">The Problem</p>
+      <h2 class="section-title">Delays Were Reported,<br>Never Predicted.</h2>
+      <p class="case-lead">In project-driven environments, delay usually gets noticed the same week a deadline is missed — by then it's too late to fix. Resource assignment was often based on gut feel and seniority rather than actual workload risk, and there was no early signal for which tasks were quietly heading toward failure.</p>
+    </div>
+  </section>
+
+  <!-- THE DATASET -->
+  <section class="case-section alt">
+    <div class="container">
+      <p class="section-label">The Dataset</p>
+      <h2 class="section-title">Dataset One<span class="case-placeholder">name placeholder</span></h2>
+      <p class="case-lead">A task-and-resource-level operations dataset — each record covers a task with its assigned resource, estimated vs. actual effort, deadline, completion timestamp, and resource experience level. <em>(Swap in the real dataset name/source here.)</em></p>
+      <h4 class="col-heading" style="margin-top:40px">Data Quality &amp; Assumptions</h4>
+      <ul class="insight-list" style="max-width:680px;">
+        <li>Effort estimates assumed reasonably accurate at task creation time</li>
+        <li>Resource experience treated as a static attribute, not time-varying</li>
+        <li>External blockers (e.g. client delays) not separated from internal delay causes</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE APPROACH -->
+  <section class="case-section">
+    <div class="container">
+      <p class="section-label">The Approach</p>
+      <h2 class="section-title">Six Stages,<br>Raw Tasks to Delay Risk.</h2>
+    </div>
+    <div class="container" style="margin-top:40px;">
+      <div class="project reveal" style="padding:8px 36px 16px;">
+
+        <div class="think-step">
+          <span class="project-num think-step-num">01</span>
+          <div>
+            <h3 class="project-title think-title">Data Sources</h3>
+            <p class="project-desc think-desc">Pulled task, resource, and project metadata from Dataset One — assignment history, effort estimates, and delivery timestamps.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">02</span>
+          <div>
+            <h3 class="project-title think-title">SQL Warehouse</h3>
+            <p class="project-desc think-desc">Structured the raw records into a queryable warehouse — joining task, resource, and project tables, and standardizing date and effort fields for analysis.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">03</span>
+          <div>
+            <h3 class="project-title think-title">Feature Engineering</h3>
+            <p class="project-desc think-desc">Engineered features like estimated-vs-actual effort ratio, resource experience level, task criticality, and rolling delay rate per resource.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">04</span>
+          <div>
+            <h3 class="project-title think-title">Analysis</h3>
+            <p class="project-desc think-desc">Tested which features actually predict delay. Effort ratio and reassignment timing mattered far more than raw seniority or experience.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">05</span>
+          <div>
+            <h3 class="project-title think-title">Power BI</h3>
+            <p class="project-desc think-desc">Built a live dashboard surfacing delay-risk by task, resource, and time period — so a manager can catch risk before a deadline, not after.</p>
+          </div>
+        </div>
+
+        <div class="think-step">
+          <span class="project-num think-step-num">06</span>
+          <div>
+            <h3 class="project-title think-title">Insights</h3>
+            <p class="project-desc think-desc">Turned the model output into specific actions: which tasks to flag, which resources to reassign, and when to rebalance workload.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY INSIGHTS -->
+  <section class="case-section alt">
+    <div class="container">
+      <p class="section-label">What It Found</p>
+      <h2 class="section-title" style="margin-bottom:40px;">Insights &amp; Decisions.</h2>
+      <div class="project-body" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">
+        <div class="project-col">
+          <h4 class="col-heading">Key Business Insights</h4>
+          <ul class="insight-list">
+            <li>Experience alone does not guarantee faster delivery</li>
+            <li>18% of tasks contribute to over 40% of total delay</li>
+            <li>Resource reassignment timing heavily impacts outcomes</li>
+          </ul>
+        </div>
+        <div class="project-col">
+          <h4 class="col-heading">Decisions Enabled</h4>
+          <ul class="insight-list">
+            <li>Prioritized high-risk tasks for senior resources</li>
+            <li>Flagged tasks exceeding 120% estimated effort</li>
+            <li>Rebalanced workload during peak delivery weeks</li>
+            <li>Delayed non-critical tasks to protect deadlines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS IMPACT -->
+  <section class="case-section">
+    <div class="container">
+      <h4 class="col-heading">Business Impact <span class="tag">Simulated</span></h4>
+      <div class="impact-grid" style="max-width:680px;margin-top:16px;">
+        <div class="impact-card reveal">
+          <div class="impact-val">21% → 13%</div>
+          <div class="impact-label">Average Delay Rate</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-val">18% → 10%</div>
+          <div class="impact-label">Deadline Miss Rate</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-val">64% → 81%</div>
+          <div class="impact-label">Resource Utilization</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-val">↓ 16%</div>
+          <div class="impact-label">Cost Overrun per Project</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DASHBOARD -->
+  <section class="case-section alt" style="padding:72px 0 0;">
+    <div class="container">
+      <p class="section-label">Live Dashboard</p>
+      <h2 class="section-title">See the Risk Score Move.</h2>
+    </div>
+    <div class="iframe-wrap" style="margin-top:40px;">
+      <iframe
+        src="https://app.powerbi.com/view?r=eyJrIjoiNGE5MzdhZjktMjIwOS00ZmQzLWE3OTQtMzhiM2IxZGNiNDY3IiwidCI6IjllYmMyNmM5LTM3OTItNDQxYy05M2Y4LTAzYTg2YTNiMDI2MiJ9"
+        allowfullscreen
+        loading="lazy"
+        title="Workflow Optimization Dashboard">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- WHY THIS MATTERS -->
+  <section class="case-section">
+    <div class="container">
+      <p class="section-label">Why It Matters</p>
+      <h2 class="section-title">Decisions, Not Decoration.</h2>
+      <p class="case-lead">Most workflow dashboards show what already happened. This one is built to catch a missed deadline before it's missed — by scoring delay risk early enough that a manager can actually act on it, not just explain it afterward.</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="recruiters">
+    <div class="container">
+      <div class="recruiters-inner reveal">
+        <p class="section-label" style="color:rgba(255,255,255,0.5)">Explore More</p>
+        <h2 class="recruiters-title">Two more systems,<br>same standard.</h2>
+        <p class="recruiters-sub">A sales profitability model, and a market volatility index — each one follows the same process: audit the data, model the mechanism, ship a decision.</p>
+        <div class="recruiters-actions">
+          <a href="project-sales-performance.html" class="btn-white">Sales Performance ↗</a>
+          <a href="project-volatility-index.html" class="btn-outline-white">Volatility Index ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Chetan Suraswal</span>
+        <span class="footer-center">Analytics Systems · Built for real decisions</span>
+        <span class="footer-copy" id="footerYear">© 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear();
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
